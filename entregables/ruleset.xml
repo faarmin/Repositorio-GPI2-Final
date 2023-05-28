@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Java Ruleset" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        Custom ruleset for Java project testing.
+    </description>
+
+    <!-- Rule for checking for unused variables -->
+    <rule ref="rulesets/java/basic.xml/UnusedLocalVariable">
+        <priority>1</priority>
+        <properties>
+            <property name="violationSuppressRegex" value=".*JUnit.*"/>
+        </properties>
+    </rule>
+
+    <!-- Rule for checking for empty catch blocks -->
+    <rule ref="rulesets/java/empty.xml/EmptyCatchBlock">
+        <priority>2</priority>
+    </rule>
+
+    <!-- Rule for checking for unused private methods -->
+    <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod">
+        <priority>3</priority>
+    </rule>
+
+    <!-- Rule for checking for unused imports -->
+    <rule ref="rulesets/java/unusedcode.xml/UnusedImports">
+        <priority>4</priority>
+    </rule>
+
+    <!-- Rule for checking for class naming conventions -->
+    <rule ref="rulesets/java/naming.xml/ClassNamingConventions">
+        <priority>5</priority>
+    </rule>
+
+    <!-- Rule for checking for unnecessary parentheses -->
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryParentheses">
+        <priority>6</priority>
+    </rule>
+
+    <!-- Rule for checking for empty if statements -->
+    <rule ref="rulesets/java/empty.xml/EmptyIfStmt">
+        <priority>7</priority>
+    </rule>
+
+</ruleset>
+
+
